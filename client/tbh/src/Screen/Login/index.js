@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, TextInput 
 import React from 'react'
 import LinearGradient from 'react-native-linear-gradient';
 
-export default function index() {
+export default function Index({ navigation }) {
   return (
     <LinearGradient start={{ x: 0.0, y: 0.1 }} end={{ x: 0.5, y: 0.6 }} colors={['#340367', '#11071B']} style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -20,7 +20,7 @@ export default function index() {
         </View>
         <View style={styles.nextBtnContainer}>
           <View>
-            <TouchableOpacity style={styles.nextBtn}>
+            <TouchableOpacity style={styles.nextBtn} onPress={() => navigation.navigate("GenderSelector")}>
               <Text style={styles.nextBtnText}>Next!</Text>
             </TouchableOpacity>
           </View>

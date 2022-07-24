@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import LinearGradient from 'react-native-linear-gradient';
 import { SvgXml } from 'react-native-svg';
 import { femaleSvg, maleSvg } from '../../Assets/Svg';
-export default function index() {
+export default function Index() {
   const [maleSelect, setMaleSelect] = useState(false);
   const [femaleSelect, setFemaleSelect] = useState(false);
   return (
@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 45,
-
   },
   logoConatainer: {
     justifyContent: 'center',

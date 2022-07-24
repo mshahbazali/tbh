@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'rea
 import React from 'react'
 import LinearGradient from 'react-native-linear-gradient';
 
-export default function index() {
+export default function Index({ navigation }) {
     return (
         <LinearGradient start={{ x: 0.0, y: 0.1 }} end={{ x: 0.5, y: 1.0 }} colors={['#340367', '#11071B']} style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -17,7 +17,7 @@ export default function index() {
                 </View>
                 <View style={styles.startBtnContainer}>
                     <View>
-                        <TouchableOpacity style={styles.startBtn}>
+                        <TouchableOpacity style={styles.startBtn} onPress={() => navigation.navigate("Login")}>
                             <Text style={styles.startBtnText}>Start Now!</Text>
                         </TouchableOpacity>
                     </View>
