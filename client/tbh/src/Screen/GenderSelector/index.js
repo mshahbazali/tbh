@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import LinearGradient from 'react-native-linear-gradient';
 import { SvgXml } from 'react-native-svg';
 import { femaleSvg, maleSvg } from '../../Assets/Svg';
-export default function Index() {
+export default function Index({ navigation }) {
   const [maleSelect, setMaleSelect] = useState(false);
   const [femaleSelect, setFemaleSelect] = useState(false);
   return (
@@ -33,7 +33,7 @@ export default function Index() {
         </View>
         <View style={styles.nextBtnContainer}>
           <View>
-            <TouchableOpacity style={styles.nextBtn}>
+            <TouchableOpacity style={styles.nextBtn} onPress={()=> navigation.navigate("Upload")}>
               <Text style={styles.nextBtnText}>Done!</Text>
             </TouchableOpacity>
           </View>
